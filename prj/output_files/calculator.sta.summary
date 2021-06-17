@@ -1,0 +1,41 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'sys_clk'
+Slack : -9.696
+TNS   : -1195.177
+
+Type  : Setup 'ShowControl:showControl1|SEL[0]'
+Slack : -3.202
+TNS   : -8.584
+
+Type  : Setup 'ShowControl:showControl1|clock_1k'
+Slack : -2.587
+TNS   : -12.658
+
+Type  : Hold 'ShowControl:showControl1|SEL[0]'
+Slack : -5.467
+TNS   : -21.845
+
+Type  : Hold 'ShowControl:showControl1|clock_1k'
+Slack : -2.833
+TNS   : -3.959
+
+Type  : Hold 'sys_clk'
+Slack : -1.973
+TNS   : -1.973
+
+Type  : Minimum Pulse Width 'sys_clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'ShowControl:showControl1|SEL[0]'
+Slack : -0.455
+TNS   : -8.190
+
+Type  : Minimum Pulse Width 'ShowControl:showControl1|clock_1k'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

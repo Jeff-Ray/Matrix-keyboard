@@ -1,0 +1,439 @@
+Analysis & Synthesis report for calculator
+Wed Jun 16 13:07:36 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |cal_top|KeyValue:keyValue1|state
+  9. State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u3|state
+ 10. State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u2|state
+ 11. State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u1|state
+ 12. State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u0|state
+ 13. User-Specified and Inferred Latches
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: uart_rx:uart_rx_uut
+ 18. Parameter Settings for User Entity Instance: uart_tx:uart_tx_uut
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++-----------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Jun 16 13:07:36 2021            ;
+; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name               ; calculator                                       ;
+; Top-level Entity Name       ; cal_top                                          ;
+; Family                      ; MAX II                                           ;
+; Total logic elements        ; 446                                              ;
+; Total pins                  ; 28                                               ;
+; Total virtual pins          ; 0                                                ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                    ;
++-----------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                                      ; cal_top            ; calculator         ;
+; Family name                                                                ; MAX II             ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; ../trl/uart_tx.v                 ; yes             ; User Verilog HDL File  ; D:/course/FPGA/Demo/Cal_new/trl/uart_tx.v     ;         ;
+; ../trl/uart_rx.v                 ; yes             ; User Verilog HDL File  ; D:/course/FPGA/Demo/Cal_new/trl/uart_rx.v     ;         ;
+; ../trl/showControl.v             ; yes             ; User Verilog HDL File  ; D:/course/FPGA/Demo/Cal_new/trl/showControl.v ;         ;
+; ../trl/keyValue.v                ; yes             ; User Verilog HDL File  ; D:/course/FPGA/Demo/Cal_new/trl/keyValue.v    ;         ;
+; ../trl/keyPress.v                ; yes             ; User Verilog HDL File  ; D:/course/FPGA/Demo/Cal_new/trl/keyPress.v    ;         ;
+; ../trl/cal_top.v                 ; yes             ; User Verilog HDL File  ; D:/course/FPGA/Demo/Cal_new/trl/cal_top.v     ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Total logic elements                        ; 446       ;
+;     -- Combinational with no register       ; 181       ;
+;     -- Register only                        ; 84        ;
+;     -- Combinational with a register        ; 181       ;
+;                                             ;           ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 166       ;
+;     -- 3 input functions                    ; 33        ;
+;     -- 2 input functions                    ; 158       ;
+;     -- 1 input functions                    ; 5         ;
+;     -- 0 input functions                    ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 326       ;
+;     -- arithmetic mode                      ; 120       ;
+;     -- qfbk mode                            ; 0         ;
+;     -- register cascade mode                ; 0         ;
+;     -- synchronous clear/load mode          ; 112       ;
+;     -- asynchronous clear/load mode         ; 259       ;
+;                                             ;           ;
+; Total registers                             ; 265       ;
+; Total logic cells in carry chains           ; 127       ;
+; I/O pins                                    ; 28        ;
+; Maximum fan-out node                        ; sys_rst_n ;
+; Maximum fan-out                             ; 262       ;
+; Total fan-out                               ; 1880      ;
+; Average fan-out                             ; 3.97      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Library Name ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+--------------+
+; |cal_top                      ; 446 (0)     ; 265          ; 0          ; 28   ; 0            ; 181 (0)      ; 84 (0)            ; 181 (0)          ; 127 (0)         ; 0 (0)      ; |cal_top                                ; work         ;
+;    |KeyValue:keyValue1|       ; 216 (36)    ; 139          ; 0          ; 0    ; 0            ; 77 (17)      ; 17 (9)            ; 122 (10)         ; 80 (0)          ; 0 (0)      ; |cal_top|KeyValue:keyValue1             ; work         ;
+;       |KeyPress:u0|           ; 45 (45)     ; 30           ; 0          ; 0    ; 0            ; 15 (15)      ; 2 (2)             ; 28 (28)          ; 20 (20)         ; 0 (0)      ; |cal_top|KeyValue:keyValue1|KeyPress:u0 ; work         ;
+;       |KeyPress:u1|           ; 45 (45)     ; 30           ; 0          ; 0    ; 0            ; 15 (15)      ; 2 (2)             ; 28 (28)          ; 20 (20)         ; 0 (0)      ; |cal_top|KeyValue:keyValue1|KeyPress:u1 ; work         ;
+;       |KeyPress:u2|           ; 45 (45)     ; 30           ; 0          ; 0    ; 0            ; 15 (15)      ; 2 (2)             ; 28 (28)          ; 20 (20)         ; 0 (0)      ; |cal_top|KeyValue:keyValue1|KeyPress:u2 ; work         ;
+;       |KeyPress:u3|           ; 45 (45)     ; 30           ; 0          ; 0    ; 0            ; 15 (15)      ; 2 (2)             ; 28 (28)          ; 20 (20)         ; 0 (0)      ; |cal_top|KeyValue:keyValue1|KeyPress:u3 ; work         ;
+;    |ShowControl:showControl1| ; 115 (115)   ; 56           ; 0          ; 0    ; 0            ; 59 (59)      ; 48 (48)           ; 8 (8)            ; 15 (15)         ; 0 (0)      ; |cal_top|ShowControl:showControl1       ; work         ;
+;    |uart_rx:uart_rx_uut|      ; 63 (63)     ; 40           ; 0          ; 0    ; 0            ; 23 (23)      ; 11 (11)           ; 29 (29)          ; 16 (16)         ; 0 (0)      ; |cal_top|uart_rx:uart_rx_uut            ; work         ;
+;    |uart_tx:uart_tx_uut|      ; 52 (52)     ; 30           ; 0          ; 0    ; 0            ; 22 (22)      ; 8 (8)             ; 22 (22)          ; 16 (16)         ; 0 (0)      ; |cal_top|uart_tx:uart_tx_uut            ; work         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |cal_top|KeyValue:keyValue1|state                                                 ;
++-----------------+----------------+-----------------+---------------+---------------+--------------+
+; Name            ; state.ROW_FOUR ; state.ROW_THREE ; state.ROW_TWO ; state.ROW_ONE ; state.NO_KEY ;
++-----------------+----------------+-----------------+---------------+---------------+--------------+
+; state.NO_KEY    ; 0              ; 0               ; 0             ; 0             ; 0            ;
+; state.ROW_ONE   ; 0              ; 0               ; 0             ; 1             ; 1            ;
+; state.ROW_TWO   ; 0              ; 0               ; 1             ; 0             ; 1            ;
+; state.ROW_THREE ; 0              ; 1               ; 0             ; 0             ; 1            ;
+; state.ROW_FOUR  ; 1              ; 0               ; 0             ; 0             ; 1            ;
++-----------------+----------------+-----------------+---------------+---------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------+
+; State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u3|state                                      ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; Name                 ; state.Filter_Down2Up ; state.Key_down ; state.Filter_Up2Down ; state.Key_up ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; state.Key_up         ; 0                    ; 0              ; 0                    ; 0            ;
+; state.Filter_Up2Down ; 0                    ; 0              ; 1                    ; 1            ;
+; state.Key_down       ; 0                    ; 1              ; 0                    ; 1            ;
+; state.Filter_Down2Up ; 1                    ; 0              ; 0                    ; 1            ;
++----------------------+----------------------+----------------+----------------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------+
+; State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u2|state                                      ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; Name                 ; state.Filter_Down2Up ; state.Key_down ; state.Filter_Up2Down ; state.Key_up ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; state.Key_up         ; 0                    ; 0              ; 0                    ; 0            ;
+; state.Filter_Up2Down ; 0                    ; 0              ; 1                    ; 1            ;
+; state.Key_down       ; 0                    ; 1              ; 0                    ; 1            ;
+; state.Filter_Down2Up ; 1                    ; 0              ; 0                    ; 1            ;
++----------------------+----------------------+----------------+----------------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------+
+; State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u1|state                                      ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; Name                 ; state.Filter_Down2Up ; state.Key_down ; state.Filter_Up2Down ; state.Key_up ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; state.Key_up         ; 0                    ; 0              ; 0                    ; 0            ;
+; state.Filter_Up2Down ; 0                    ; 0              ; 1                    ; 1            ;
+; state.Key_down       ; 0                    ; 1              ; 0                    ; 1            ;
+; state.Filter_Down2Up ; 1                    ; 0              ; 0                    ; 1            ;
++----------------------+----------------------+----------------+----------------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------+
+; State Machine - |cal_top|KeyValue:keyValue1|KeyPress:u0|state                                      ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; Name                 ; state.Filter_Down2Up ; state.Key_down ; state.Filter_Up2Down ; state.Key_up ;
++----------------------+----------------------+----------------+----------------------+--------------+
+; state.Key_up         ; 0                    ; 0              ; 0                    ; 0            ;
+; state.Filter_Up2Down ; 0                    ; 0              ; 1                    ; 1            ;
+; state.Key_down       ; 0                    ; 1              ; 0                    ; 1            ;
+; state.Filter_Down2Up ; 1                    ; 0              ; 0                    ; 1            ;
++----------------------+----------------------+----------------+----------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------+------------------------+
+; ShowControl:showControl1|data_tmp[0]               ; ShowControl:showControl1|WideOr0 ; yes                    ;
+; ShowControl:showControl1|data_tmp[1]               ; ShowControl:showControl1|WideOr0 ; yes                    ;
+; ShowControl:showControl1|data_tmp[2]               ; ShowControl:showControl1|WideOr0 ; yes                    ;
+; ShowControl:showControl1|data_tmp[3]               ; ShowControl:showControl1|WideOr0 ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                                  ;                        ;
++----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 265   ;
+; Number of registers using Synchronous Clear  ; 112   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 259   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; ShowControl:showControl1|SEL[0]          ; 4       ;
+; ShowControl:showControl1|SEL[1]          ; 5       ;
+; ShowControl:showControl1|SEL[2]          ; 6       ;
+; ShowControl:showControl1|SEL[3]          ; 6       ;
+; ShowControl:showControl1|SEL[4]          ; 6       ;
+; ShowControl:showControl1|SEL[5]          ; 6       ;
+; ShowControl:showControl1|SEL[6]          ; 6       ;
+; ShowControl:showControl1|SEL[7]          ; 8       ;
+; uart_tx:uart_tx_uut|uart_tx              ; 2       ;
+; ShowControl:showControl1|clock_1k        ; 9       ;
+; KeyValue:keyValue1|KeyPress:u3|KEY_STATE ; 4       ;
+; KeyValue:keyValue1|KeyPress:u1|KEY_STATE ; 3       ;
+; KeyValue:keyValue1|KeyPress:u2|KEY_STATE ; 4       ;
+; KeyValue:keyValue1|KeyPress:u0|KEY_STATE ; 2       ;
+; Total number of inverted registers = 14  ;         ;
++------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |cal_top|uart_tx:uart_tx_uut|cnt1[0]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |cal_top|uart_tx:uart_tx_uut|cnt0[12]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |cal_top|uart_rx:uart_rx_uut|cnt1[1]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |cal_top|uart_rx:uart_rx_uut|cnt0[1]        ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |cal_top|KeyValue:keyValue1|colIndex[0]     ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |cal_top|ShowControl:showControl1|Selector2 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:uart_rx_uut ;
++----------------+----------+--------------------------------------+
+; Parameter Name ; Value    ; Type                                 ;
++----------------+----------+--------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                       ;
+; UART_BPS       ; 115200   ; Signed Integer                       ;
++----------------+----------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_tx:uart_tx_uut ;
++----------------+----------+--------------------------------------+
+; Parameter Name ; Value    ; Type                                 ;
++----------------+----------+--------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                       ;
+; UART_BPS       ; 115200   ; Signed Integer                       ;
++----------------+----------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Jun 16 13:07:35 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculator -c calculator
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /course/fpga/demo/cal_new/trl/uart_tx.v
+    Info (12023): Found entity 1: uart_tx
+Info (12021): Found 1 design units, including 1 entities, in source file /course/fpga/demo/cal_new/trl/uart_rx.v
+    Info (12023): Found entity 1: uart_rx
+Info (12021): Found 1 design units, including 1 entities, in source file /course/fpga/demo/cal_new/trl/showcontrol.v
+    Info (12023): Found entity 1: ShowControl
+Info (12021): Found 1 design units, including 1 entities, in source file /course/fpga/demo/cal_new/trl/keyvalue.v
+    Info (12023): Found entity 1: KeyValue
+Info (12021): Found 1 design units, including 1 entities, in source file /course/fpga/demo/cal_new/trl/keypress.v
+    Info (12023): Found entity 1: KeyPress
+Info (12021): Found 1 design units, including 1 entities, in source file /course/fpga/demo/cal_new/trl/cal_top.v
+    Info (12023): Found entity 1: cal_top
+Info (12127): Elaborating entity "cal_top" for the top level hierarchy
+Info (12128): Elaborating entity "KeyValue" for hierarchy "KeyValue:keyValue1"
+Warning (10230): Verilog HDL assignment warning at keyValue.v(98): truncated value with size 4 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at keyValue.v(110): truncated value with size 4 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at keyValue.v(122): truncated value with size 4 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at keyValue.v(133): truncated value with size 4 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at keyValue.v(159): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "KeyPress" for hierarchy "KeyValue:keyValue1|KeyPress:u0"
+Info (12128): Elaborating entity "ShowControl" for hierarchy "ShowControl:showControl1"
+Warning (10270): Verilog HDL Case Statement warning at showControl.v(64): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at showControl.v(64): inferring latch(es) for variable "data_tmp", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "data_tmp[0]" at showControl.v(64)
+Info (10041): Inferred latch for "data_tmp[1]" at showControl.v(64)
+Info (10041): Inferred latch for "data_tmp[2]" at showControl.v(64)
+Info (10041): Inferred latch for "data_tmp[3]" at showControl.v(64)
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx_uut"
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(75): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(90): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx_uut"
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(62): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(76): truncated value with size 32 to match size of target (4)
+Warning (13012): Latch ShowControl:showControl1|data_tmp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ShowControl:showControl1|SEL[7]
+Warning (13012): Latch ShowControl:showControl1|data_tmp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ShowControl:showControl1|SEL[7]
+Warning (13012): Latch ShowControl:showControl1|data_tmp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ShowControl:showControl1|SEL[7]
+Warning (13012): Latch ShowControl:showControl1|data_tmp[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ShowControl:showControl1|SEL[7]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SEG[7]" is stuck at GND
+Info (18000): Registers with preset signals will power-up high
+Info (21057): Implemented 474 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 446 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4579 megabytes
+    Info: Processing ended: Wed Jun 16 13:07:36 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

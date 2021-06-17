@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Wed Jun 16 13:07:36 2021
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : calculator
+Top-level Entity Name : cal_top
+Family : MAX II
+Total logic elements : 446
+Total pins : 28
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

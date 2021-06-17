@@ -1,0 +1,91 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 19:08:45  April 24, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		calculator_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM1270T144C5
+set_global_assignment -name TOP_LEVEL_ENTITY cal_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:08:45  APRIL 24, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE "ANY QFP"
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE ../trl/uart_tx.v
+set_global_assignment -name VERILOG_FILE ../trl/uart_rx.v
+set_global_assignment -name VERILOG_FILE ../trl/showControl.v
+set_global_assignment -name VERILOG_FILE ../trl/keyValue.v
+set_global_assignment -name VERILOG_FILE ../trl/keyPress.v
+set_global_assignment -name VERILOG_FILE ../trl/cal_top.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_18 -to sys_clk
+set_location_assignment PIN_143 -to sys_rst_n
+set_location_assignment PIN_7 -to uart_rx
+set_location_assignment PIN_6 -to uart_tx
+set_location_assignment PIN_43 -to SEL[7]
+set_location_assignment PIN_42 -to SEL[6]
+set_location_assignment PIN_41 -to SEL[5]
+set_location_assignment PIN_40 -to SEL[4]
+set_location_assignment PIN_39 -to SEL[3]
+set_location_assignment PIN_38 -to SEL[2]
+set_location_assignment PIN_37 -to SEL[1]
+set_location_assignment PIN_32 -to SEL[0]
+set_location_assignment PIN_31 -to SEG[7]
+set_location_assignment PIN_30 -to SEG[6]
+set_location_assignment PIN_29 -to SEG[5]
+set_location_assignment PIN_28 -to SEG[4]
+set_location_assignment PIN_27 -to SEG[3]
+set_location_assignment PIN_24 -to SEG[2]
+set_location_assignment PIN_23 -to SEG[1]
+set_location_assignment PIN_22 -to SEG[0]
+set_location_assignment PIN_66 -to KEY_COL[3]
+set_location_assignment PIN_67 -to KEY_COL[2]
+set_location_assignment PIN_68 -to KEY_COL[1]
+set_location_assignment PIN_69 -to KEY_COL[0]
+set_location_assignment PIN_60 -to KEY_ROW[3]
+set_location_assignment PIN_61 -to KEY_ROW[2]
+set_location_assignment PIN_62 -to KEY_ROW[1]
+set_location_assignment PIN_63 -to KEY_ROW[0]

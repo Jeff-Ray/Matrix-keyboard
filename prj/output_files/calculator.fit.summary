@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Jun 16 13:07:39 2021
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : calculator
+Top-level Entity Name : cal_top
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 398 / 1,270 ( 31 % )
+Total pins : 28 / 116 ( 24 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
